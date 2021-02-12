@@ -115,14 +115,18 @@ QuitPractice()
 
 SelectFaction(Faction)
 {
-    Send {Right %Faction%}
+    RightPresses := Faction  - 1
+
+    Send {Right %RightPresses%}
 
     Confirm()
 }
 
 SelectMap(Map)
 {
-    Send {Right %Map%}
+    RightPresses := Map - 1
+
+    Send {Right %RightPresses%}
 
     Confirm()
 }
