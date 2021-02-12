@@ -21,13 +21,8 @@ for Index, MapName in Maps
 Gui, Show
 Return
 
-
 Update:
-
     Gui, Submit, NoHide
-
-
-
 
 StartPractice(Faction, Map)
 {
@@ -127,7 +122,6 @@ SelectFaction(Faction)
 
 SelectMap(Map)
 {
-    MsgBox,, Title, %Map%
     Send {Right %Map%}
 
     Confirm()
@@ -136,21 +130,15 @@ SelectMap(Map)
 Confirm()
 {
     Send {Enter}
-
 }
 
 ^+a::
     Gui, Agriculate:Show
     Return
 
-
 ^+s::
-    MsgBox,, Title, %SelectedMap% %SelectedFaction%,
-
     StartPractice(SelectedFaction, SelectedMap)
     Return
-
-
 
 ^+r::
     MsgBox,, Title, Restarting,
